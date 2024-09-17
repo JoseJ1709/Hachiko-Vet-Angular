@@ -1,0 +1,80 @@
+header {
+  background-color: #e0e0d8;
+  color: #fff;
+  padding: 10px 0;
+  height: 50px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+#menu > * {
+  flex-shrink: 1; /* Permite que los elementos se reduzcan en tamaño si es necesario */
+  min-width: 0; /* Evita que los elementos se desborden horizontalmente */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: 100px;
+}
+
+header nav ul li {
+  display: flex;
+  font-size: 27px;
+  margin-left: 25px;
+  align-items: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+#logo-container {
+  display: flex;
+}
+
+#logo-container h2 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+#logo {
+  margin-left: 100px;
+  width: 60px;
+}
+
+#logo-message {
+  width: 25px;
+  margin-right: 6px;
+}
+
+#book-now {
+  height: 56px;
+  background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+  box-shadow: 0px 8px 23px rgba(65, 132, 247, 0.24);
+  border-radius: 100px;
+  border: none;
+  color: white;
+  padding: 0px 35px;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 80px;
+}
