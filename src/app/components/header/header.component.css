@@ -1,7 +1,7 @@
 header {
   background-color: #e0e0d8;
   color: #fff;
-  padding: 10px 0;
+  padding: 30px 0;
   height: 50px;
 }
 
@@ -30,7 +30,7 @@ header nav ul {
 
 header nav ul li {
   display: flex;
-  font-size: 27px;
+  font-size: 35px;
   margin-left: 25px;
   align-items: center;
 }
@@ -54,6 +54,7 @@ header nav ul li a {
 #logo {
   margin-left: 100px;
   width: 60px;
+  height: 58px;
 }
 
 #logo-message {

@@ -1,10 +1,15 @@
+<!-- src/app/components/header/header.component.html -->
 <header>
   <nav>
     <div id="logo-container">
       <img id="logo" src="./assets/landing/Logo.jpeg" alt="logo">
     </div>
     <ul id="menu"> <!-- Menu -->
-      <li><a href="/cliente/login">Iniciar Sesion</a></li>
+      <li *ngIf="userRole === 'veterinario'"><a href="/mascotas">Lista de Mascotas</a></li>
+      <li *ngIf="userRole === 'veterinario'"><a href="/clientes">Lista de Clientes</a></li>
+      <li *ngIf="userRole === 'veterinario'"><a href="/registro-m">Registrar</a></li>
+      <li *ngIf="userRole === 'usuario'"><a href="/usuario/salir">Salir</a></li>
+      <li *ngIf="userRole === 'admin'"><a href="/admin/veterinarios">Lista de Veterinarios</a></li>
     </ul>
     <button id="book-now">
       <img id="logo-message" src="./assets/landing/message-circle.png" alt="message-circle"> <!-- Icono -->

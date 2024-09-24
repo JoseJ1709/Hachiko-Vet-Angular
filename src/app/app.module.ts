@@ -6,7 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
-import { VeterinarioComponent } from './pages/veterinario/veterinario.component';
+import { TableDogsComponent } from './components/table-dogs/table-dogs.component';
+import { RegistroDogsComponent } from './components/registro-dogs/registro-dogs.component';
+import { RegistroComponent } from './pages/registro/registro.component';
+import {FormsModule} from "@angular/forms";
+import { ListDComponent } from './pages/list-d/list-d.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { VeterinarioComponent } from './pages/veterinario/veterinario.component'
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    VeterinarioComponent
+    TableDogsComponent,
+    RegistroDogsComponent,
+    RegistroComponent,
+    ListDComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
