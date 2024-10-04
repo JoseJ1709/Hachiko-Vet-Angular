@@ -9,10 +9,9 @@ import { MascotaService } from '../../services/mascota.service';
   styleUrls: ['./registro-dogs.component.css']
 })
 export class RegistroDogsComponent implements OnInit, OnChanges {
-  @Input() mascotaToEdit: MascotaCl | null = null;
-  @Output() addMascotaEvent = new EventEmitter<MascotaCl>();
-  @Output() updateMascotaEvent = new EventEmitter<MascotaCl>();
+  @Input() userRole: string = 'editar';
 
+  mascotaToEdit: MascotaCl | null = null;
   formMascota: MascotaCl = new MascotaCl('', '', 0, 0, '', false, '', undefined);
 
   constructor(
@@ -25,11 +24,11 @@ export class RegistroDogsComponent implements OnInit, OnChanges {
     this.route.queryParams.subscribe(params => {
       const id = +params['id'];
       if (id) {
+        this.userRole = 'editar';
         const mascota = this.mascotaService.getMascotaById(id);
         this.mascotaToEdit = mascota ? mascota : null;
         if (this.mascotaToEdit) {
           this.formMascota = { ...this.mascotaToEdit };
-          console.log('formMascota:', this.formMascota);
         }
       }
     });
@@ -41,11 +40,9 @@ export class RegistroDogsComponent implements OnInit, OnChanges {
     }
   }
 
-  addMascotaForm(event: Event): void {
-    event.preventDefault();
+  addMascotaForm(): void {
     if (this.formMascota.id) {
       this.mascotaService.updateMascota(this.formMascota);
-      this.updateMascotaEvent.emit(this.formMascota);
     } else {
       this.mascotaService.addMascota(this.formMascota);
     }

@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() userRole: 'veterinario' | 'usuario' | 'admin' = 'usuario';
+  @Input() userRole: 'veterinario' | 'usuario' | 'admin' | 'landing' = 'usuario';
 }

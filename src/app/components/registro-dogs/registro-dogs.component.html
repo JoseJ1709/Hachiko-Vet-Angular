@@ -3,8 +3,9 @@
   <img id="centro2" src="./assets/register/centro2.png">
 </div>
 <div id="forms">
-  <h1 id="registrar">Registrar</h1>
-  <form (ngSubmit)="addMascotaForm($event)">
+  <h1 id="registrar" *ngIf="userRole === 'registrar'">Registrar</h1>
+  <h1 id="registrar" *ngIf="userRole === 'editar'">Editar</h1>
+  <form (ngSubmit)="addMascotaForm()">
     <h2>Información Mascota</h2>
 
     <div>

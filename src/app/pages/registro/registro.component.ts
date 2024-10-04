@@ -8,9 +8,5 @@ import { MascotaService } from '../../services/mascota.service';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
-  constructor(private mascotaService: MascotaService) {}
 
-  agregarMascota(mascota: MascotaCl): void {
-    this.mascotaService.addMascota(mascota);
-  }
 }
