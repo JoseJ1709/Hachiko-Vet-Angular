@@ -6,9 +6,9 @@ export class ClienteCl {
   public nombre: string;
   public correo: string;
   public celular: number;
-  public mascotasList: MascotaCl[];
+  public mascotasList?: MascotaCl[];
 
-  constructor(cedula: number, nombre: string, correo: string, celular: number, mascotasList: MascotaCl[]) {
+  constructor(cedula: number, nombre: string, correo: string, celular: number, mascotasList?: MascotaCl[]) {
     this.cedula = cedula;
     this.nombre = nombre;
     this.correo = correo;

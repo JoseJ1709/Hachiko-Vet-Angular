@@ -1,0 +1,36 @@
+<div id="clouds">
+  <img id="centro1" src="../../../../assets/register/centro1.png">
+  <img id="centro2" src="../../../../assets/register/centro2.png">
+</div>
+<div id="forms">
+  <h1 class="registrar" *ngIf="userRole === 'registrar'">Registrar</h1>
+  <h1 class="registrar" *ngIf="userRole === 'editar'">Editar</h1>
+  <form (ngSubmit)="addClienteForm()">
+    <h2>Información Cliente</h2>
+
+    <div>
+      <label for="cedula">Cedula:</label>
+      <input type="text" id="cedula" [(ngModel)]="formCliente.cedula" name="cedula" required>
+    </div>
+
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="formCliente.nombre" name="nombre" required>
+    </div>
+
+    <div>
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" [(ngModel)]="formCliente.correo" name="correo" required>
+    </div>
+
+    <div>
+      <label for="celular">Celular:</label>
+      <input type="text" id="celular" [(ngModel)]="formCliente.celular" name="celular" required>
+    </div>
+
+
+    <div class="button-registrar">
+      <button id="button-registrar-mascota" type="submit">Registrar</button>
+    </div>
+  </form>
+</div>

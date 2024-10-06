@@ -1,0 +1,53 @@
+<div class="container">
+  <div id="clouds">
+    <div id="clouds-up">
+      <div class="up">
+        <img class="izq-a" src="../../../../assets/list/esquinas-a.png">
+        <img class="centr" src="../../../../assets/list/centro-a.png">
+        <img class="izq-d" src="../../../../assets/list/esquinas-a.png">
+      </div>
+      <div class="down">
+        <img class="izq-a" src="../../../../assets/list/esquinas-a.png">
+        <img class="centr" src="../../../../assets/list/centro-a.png">
+        <img class="izq-d" src="../../../../assets/list/esquinas-a.png">
+      </div>
+    </div>
+    <div id="clouds-down">
+      <div class="up">
+        <img class="izq-a" src="../../../../assets/list/esquinas-a.png">
+        <img class="centr" src="../../../../assets/list/centro-a.png">
+        <img class="izq-d" src="../../../../assets/list/esquinas-a.png">
+      </div>
+      <div class="down">
+        <img class="izq-a" src="../../../../assets/list/esquinas-a.png">
+        <img class="centr" src="../../../../assets/list/centro-a.png">
+        <img class="izq-d" src="../../../../assets/list/esquinas-a.png">
+      </div>
+    </div>
+  </div>
+  <div id="register-container">
+    <h1>Clientes registrados</h1>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th>Cedula</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Celular</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.cedula }}</td>
+      <td>{{ cliente.nombre }}</td>
+      <td>{{ cliente.correo }}</td>
+      <td>{{ cliente.celular }}</td>
+      <td>
+        <a id="editar" (click)="editCliente(cliente)">editar</a>
+        <a id="eliminar" (click)="deleteCliente(cliente.id!)">eliminar</a>
+      </td>
+    </tbody>
+  </table>
+</div>

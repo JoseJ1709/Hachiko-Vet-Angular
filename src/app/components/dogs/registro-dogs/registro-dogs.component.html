@@ -1,10 +1,10 @@
 <div id="clouds">
-  <img id="centro1" src="./assets/register/centro1.png">
-  <img id="centro2" src="./assets/register/centro2.png">
+  <img id="centro1" src="../../../../assets/register/centro1.png">
+  <img id="centro2" src="../../../../assets/register/centro2.png">
 </div>
 <div id="forms">
-  <h1 id="registrar" *ngIf="userRole === 'registrar'">Registrar</h1>
-  <h1 id="registrar" *ngIf="userRole === 'editar'">Editar</h1>
+  <h1 class="registrar" *ngIf="userRole === 'registrar'">Registrar</h1>
+  <h1 class="registrar" *ngIf="userRole === 'editar'">Editar</h1>
   <form (ngSubmit)="addMascotaForm()">
     <h2>Información Mascota</h2>
 
@@ -29,8 +29,8 @@
     </div>
 
     <div>
-      <label for="foto">Foto:</label>
-      <input type="text" id="foto" [(ngModel)]="formMascota.foto" name="foto" required>
+      <label for="foto">Imagen:</label>
+      <input type="text" id="foto" [(ngModel)]="formMascota.imagen" name="Imagen" required>
     </div>
 
     <div>
@@ -41,6 +41,13 @@
     <div>
       <label for="estado">Estado:</label>
       <input type="checkbox" id="estado" [(ngModel)]="formMascota.estado" name="estado">
+    </div>
+
+    <div>
+      <label for="cliente">Cliente:</label>
+      <select id="cliente" [(ngModel)]="formMascota.cliente" name="cliente" required>
+        <option *ngFor="let cliente of clientes" [ngValue]="cliente">{{cliente.nombre}}</option>
+      </select>
     </div>
 
     <div class="button-registrar">

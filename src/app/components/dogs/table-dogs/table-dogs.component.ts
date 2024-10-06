@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MascotaCl } from '../../interfaces/mascota-cl';
-import { MascotaService } from '../../services/mascota.service';
+import { MascotaCl } from '../../../interfaces/mascota-cl';
+import { MascotaService } from '../../../services/mascota.service';
+
 
 @Component({
   selector: 'app-table-dogs',
@@ -27,6 +28,10 @@ export class TableDogsComponent implements OnInit {
   }
 
   refreshMascotas(): void {
-    this.mascotas = this.mascotaService.getMascotas();
+    this.router.navigate(['/mascotas']);
+    this.mascotaService.getMascotas().subscribe(
+      (mascotas) => {
+      this.mascotas = mascotas;
+    });
   }
 }

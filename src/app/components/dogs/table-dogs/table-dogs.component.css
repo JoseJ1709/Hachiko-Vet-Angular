@@ -1,0 +1,154 @@
+#clouds {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#clouds-up {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#clouds-down {
+  margin-top: 170px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.up img {
+  position: absolute;
+  width: 670px;
+  height: 200px;
+}
+
+.down img{
+  margin-top: 180px;
+  transform: scaleY(-1);
+  position: absolute;
+  width: 670px;
+  height: 200px;
+}
+.izq-a {
+  margin-left: 100px;
+  left: 0;
+  transform: scaleX(-1);
+}
+
+.centr {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.izq-d {
+  margin-right: 100px;
+  right: 0;
+}
+.container {
+  padding-top: 50px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+  min-height: 614px;
+  height: auto;
+}
+
+.container h1 {
+  margin-left: 40px;
+  font-size: 45px;
+  color: #2C3E50;
+}
+
+table {
+  width: 1000px;
+  border-collapse: collapse;
+  border-spacing: 0 10px;
+}
+
+th{
+  padding: 10px;
+  text-align: center;
+  background-color: #DBE9F9;
+  font-size: 24px;
+  color: #2C3E50;
+  height: 40px;
+  border-bottom: 30px solid transparent;
+}
+
+td{
+  padding: 15px 10px;
+  text-align: center;
+
+}
+#imagen-dog{
+  width: 40px;
+}
+tbody tr{
+  font-size: 22px;
+}
+tbody tr:nth-child(odd) {
+  background-color: #BED7F4;
+  color: #2C3E50;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #A3C1E3;
+  color: #2C3E50;
+}
+#editar{
+  background-color: transparent;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  align-items: center;
+  line-height: 28px;
+  border: 2px solid #227a1e;
+  color: #206e02;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 22px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+#eliminar{
+  background-color: transparent;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  align-items: center;
+  line-height: 28px;
+  border: 2px solid #ed3737;
+  color: #ec1c1c;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 22px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#register-container{
+  display: flex;
+  align-items: center;
+}
+#button-registrar{
+  margin-top: 20px;
+  margin-left: 50px;
+  background-color: transparent;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #3780ed;
+  color: #1c53ec;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 22px;
+  text-decoration: none;
+
+}

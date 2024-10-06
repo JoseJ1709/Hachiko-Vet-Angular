@@ -1,45 +1,43 @@
 import { Injectable } from '@angular/core';
 import { MascotaCl } from '../interfaces/mascota-cl';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MascotaService {
-  private mascotas: MascotaCl[] = [
-    { id: 1, nombre: 'Max', raza: 'Labrador', edad: 5, peso: 30, enfermedad: 'None', estado: true, foto: "https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 2, nombre: 'Bella', raza: 'Beagle', edad: 3, peso: 20, enfermedad: 'None', estado: true, foto: "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" },
-    { id: 3, nombre: 'Charlie', raza: 'Poodle', edad: 4, peso: 25, enfermedad: 'None', estado: true, foto: "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" },
-    { id: 4, nombre: 'Luna', raza: 'German Shepherd', edad: 6, peso: 35, enfermedad: 'None', estado: true, foto:"https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},
-    { id: 5, nombre: 'Rocky', raza: 'Bulldog', edad: 2, peso: 22, enfermedad: 'None', estado: true, foto: "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" },
-    { id: 4, nombre: 'Luna', raza: 'German Shepherd', edad: 6, peso: 35, enfermedad: 'None', estado: true, foto:"https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},
-    { id: 4, nombre: 'Luna', raza: 'German Shepherd', edad: 6, peso: 35, enfermedad: 'None', estado: true, foto:"https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},
-    { id: 4, nombre: 'Luna', raza: 'German Shepherd', edad: 6, peso: 35, enfermedad: 'None', estado: true, foto:"https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},
-    { id: 4, nombre: 'Luna', raza: 'German Shepherd', edad: 6, peso: 35, enfermedad: 'None', estado: true, foto:"https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},
-    { id: 4, nombre: 'Luna', raza: 'German Shepherd', edad: 6, peso: 35, enfermedad: 'None', estado: true, foto:"https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"}
-
-  ];
-
-  getMascotas(): MascotaCl[] {
-    return this.mascotas;
+  constructor(private http: HttpClient) {
   }
 
-  addMascota(mascota: MascotaCl): void {
-    mascota.id = this.mascotas.length ? Math.max(...this.mascotas.map(m => m.id!)) + 1 : 1;
-    this.mascotas.push(mascota);
+  getMascotas(): Observable<MascotaCl[]> {
+    return this.http.get<MascotaCl[]>('http://localhost:8090/mascota/all');
   }
 
-  deleteMascota(id: number): void {
-    this.mascotas = this.mascotas.filter(mascota => mascota.id !== id);
+  getMascotaById(id: number): Observable<MascotaCl> {
+    return this.http.get<MascotaCl>(`http://localhost:8090/mascota/find/`+id);
+  }
+  deleteMascota(id: number){
+    this.http.delete(`http://localhost:8090/mascota/eliminar/`+id).subscribe();
   }
 
-  updateMascota(updatedMascota: MascotaCl): void {
-    const index = this.mascotas.findIndex(mascota => mascota.id === updatedMascota.id);
-    if (index !== -1) {
-      this.mascotas[index] = updatedMascota;
+  addMascota(mascota: MascotaCl, clienteId: number | undefined): void {
+    if (clienteId !== undefined) {
+      const url = `http://localhost:8090/mascota/agregar/${clienteId}?clienteId=${clienteId}`;
+      this.http.post(url, mascota).subscribe();
+    } else {
+      console.error('Cliente ID is undefined');
     }
   }
 
-  getMascotaById(id: number): MascotaCl | undefined {
-    return this.mascotas.find(mascota => mascota.id === id);
+  updateMascota(mascota: MascotaCl, clienteId :number | undefined ): void {
+    if (clienteId !== undefined) {
+      const url = `http://localhost:8090/mascota/editar/${mascota.id}?clienteId=${clienteId}`;
+      this.http.put(url, mascota).subscribe();
+    }else {
+      console.error('Cliente ID is undefined');
+    }
+
   }
+
 }
