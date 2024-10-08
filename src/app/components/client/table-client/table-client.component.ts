@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ClienteCl} from "../../../interfaces/cliente-cl";
 import {ClienteService} from "../../../services/cliente.service";
 import {Router} from "@angular/router";
@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   templateUrl: './table-client.component.html',
   styleUrls: ['./table-client.component.css']
 })
-export class TableClientComponent {
+export class TableClientComponent implements OnInit{
   clientes: ClienteCl[] = [];
 
   constructor(private clienteService: ClienteService, private router: Router, ) {}
@@ -18,8 +18,8 @@ export class TableClientComponent {
   }
 
   deleteCliente(id: number): void {
+    this.clientes = this.clientes.filter(cliente => cliente.id !== id);
     this.clienteService.deleteCliente(id);
-    this.refreshClientes();
   }
 
   editCliente(cliente: ClienteCl): void {

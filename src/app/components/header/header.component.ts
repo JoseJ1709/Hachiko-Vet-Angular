@@ -1,4 +1,3 @@
-// src/app/components/header/header.component.ts
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() userRole: 'veterinario-d' | 'veterinario-c' | 'usuario' | 'admin' | 'landing' = 'usuario';
+  @Input() userRole: 'veterinario-d' |'login-c' | 'login-v' | 'veterinario-c' | 'usuario' | 'admin' | 'landing' = 'usuario';
 }

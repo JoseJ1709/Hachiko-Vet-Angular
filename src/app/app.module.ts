@@ -16,6 +16,14 @@ import { TableClientComponent } from './components/client/table-client/table-cli
 import { RegistroClientComponent } from './components/client/registro-client/registro-client.component';
 import { ListCComponent } from './pages/clients/list-c/list-c.component';
 import { RegistroCComponent } from './pages/clients/registro-c/registro-c.component';
+import { LoginClientComponent } from './pages/login/login-client/login-client.component';
+import { LoginVetComponent } from './pages/login/login-vet/login-vet.component';
+import { LoginComponentClient} from './components/client/login/login.component';
+import {LoginComponentDogs} from "./components/dogs/login/login.component";
+import { MascotasClientComponent } from './components/client/mascotas-client/mascotas-client.component';
+import {MascotasComponent} from "./pages/clients/mascotas/mascotas.component";
+import { DetailsComponent } from './components/dogs/details/details.component';
+import { DetailDogComponent } from './pages/dogs/detail-dog/detail-dog.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +38,15 @@ import { RegistroCComponent } from './pages/clients/registro-c/registro-c.compon
     TableClientComponent,
     RegistroClientComponent,
     ListCComponent,
-    RegistroCComponent
+    RegistroCComponent,
+    LoginClientComponent,
+    LoginVetComponent,
+    LoginComponentClient,
+    LoginComponentDogs,
+    MascotasClientComponent,
+    MascotasComponent,
+    DetailsComponent,
+    DetailDogComponent,
   ],
   imports: [
     BrowserModule,

@@ -32,4 +32,11 @@ export class ClienteService{
       const url = `http://localhost:8090/cliente/editar/${cliente.id}`;
       this.http.put(url, cliente).subscribe();
     }
+    loginCLiente(cedula : number ): Observable<ClienteCl> {
+      return this.http.get<ClienteCl>('http://localhost:8090/cliente/login/' + cedula);
+    }
+    mascotasClientes (id: number): Observable<MascotaCl[]> {
+      return this.http.get<MascotaCl[]>('http://localhost:8090/cliente/mascotas/' + id);
+    }
+
 }

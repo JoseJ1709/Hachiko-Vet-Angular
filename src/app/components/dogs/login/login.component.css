@@ -1,0 +1,103 @@
+#clouds {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  pointer-events: none;
+}
+#centro1{
+  position: absolute;
+  right: 0;
+  margin-right: 200px;
+  width: 500px;
+}
+#centro2{
+  position: absolute;
+  left: 0;
+  margin-top: 450px;
+  margin-left: 200px;
+}
+#rocket{
+  width: 600px;
+  position: absolute;
+  right: 0;
+  margin-top: 900px;
+}
+#logins{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  gap: 100px;
+}
+.forms {
+  background-color: rgba(255, 255, 255, 0.274);
+  padding: 50px;
+  border-radius: 15px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.registrar {
+  font-size: 40px;
+  color: #0863be;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.forms form div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.forms div div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.forms input {
+  background-color: #EAF0F7;
+  border: 1px solid #EAF0F7;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 18px;
+  color: black;
+  width: 100%;
+  text-align: start;
+}
+
+
+.button-registrar {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button-registrar2 {
+  background-color: #3780ed;;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #3780ed;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.crear-cuenta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.crear-cuenta a {
+  color: red;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.crear-cuenta a:hover {
+  text-decoration: underline;
+}

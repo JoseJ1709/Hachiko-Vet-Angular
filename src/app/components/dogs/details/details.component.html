@@ -1,0 +1,21 @@
+<main>
+  <div id="container">
+    <div id="img-container">
+      <img [src]="mascota?.imagen">
+    </div>
+    <div id="data-container">
+      <div id="names">
+        <div class="pet-name">Nombre: <span>{{ mascota?.nombre }}</span></div>
+      </div>
+      <div id="info-container">
+        <div class="info">
+          <p>Raza: <span>{{ mascota?.raza }}</span></p>
+          <p>Edad: <span>{{ mascota?.edad }}</span> años</p>
+          <p>Peso: <span>{{ mascota?.peso }}</span> Kg</p>
+          <p>Enfermedad: <span>{{ mascota?.enfermedad }}</span></p>
+          <p>Estado: <span>{{ mascota?.estado === true ? 'Inactivo' : 'Activo' }}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,15 @@
+<main>
+  <div id="logins">
+    <div class="forms">
+      <h1 class="registrar">Usuario</h1>
+      <form  (ngSubmit)="checkLogin()">
+        <div>
+          <input [(ngModel)]="cedula" type="text" id="cedula" name="cedula" placeholder="Cédula" required minlength="10" >
+        </div>
+        <div class="button-registrar">
+          <button class="button-registrar2" type="submit">Ingresar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

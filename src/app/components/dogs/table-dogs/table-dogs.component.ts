@@ -19,8 +19,9 @@ export class TableDogsComponent implements OnInit {
   }
 
   deleteMascota(id: number): void {
+    this.mascotas = this.mascotas.filter(mascota => mascota.id !== id);
     this.mascotaService.deleteMascota(id);
-    this.refreshMascotas();
+
   }
 
   editMascota(mascota: MascotaCl): void {
@@ -33,5 +34,9 @@ export class TableDogsComponent implements OnInit {
       (mascotas) => {
       this.mascotas = mascotas;
     });
+  }
+
+  showMascota(id: number | undefined): void {
+    this.router.navigate(['/detalles-mascota'], { queryParams: { id } });
   }
 }

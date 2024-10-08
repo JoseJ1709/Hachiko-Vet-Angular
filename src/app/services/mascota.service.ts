@@ -37,7 +37,8 @@ export class MascotaService {
     }else {
       console.error('Cliente ID is undefined');
     }
-
   }
-
+  loginMascota(cedula : number, contrase :string ): Observable<Boolean> {
+    return this.http.get<Boolean>('http://localhost:8090/veterinario/find/' + cedula);
+  }
 }

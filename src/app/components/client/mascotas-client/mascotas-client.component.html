@@ -1,6 +1,6 @@
 <div class="container">
   <div id="register-container">
-    <h1>Perros registrados</h1>
+    <h1>Tus Mascotas {{client?.nombre}} </h1>
   </div>
   <table>
     <thead>
@@ -9,19 +9,14 @@
       <th>Raza</th>
       <th>Imagen</th>
       <th>Estado</th>
-      <th>Acciones</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let mascota of mascotas" (click)="showMascota(mascota.id)">
+    <tr *ngFor="let mascota of mascotas">
       <td>{{ mascota.nombre }}</td>
       <td>{{ mascota.raza }}</td>
       <td><img id="imagen-dog" [src]="mascota.imagen"></td>
       <td>{{ mascota.estado ? 'Activo' : 'Inactivo' }}</td>
-      <td>
-        <a id="editar" (click)="editMascota(mascota); $event.stopPropagation()">editar</a>
-        <a id="eliminar" (click)="deleteMascota(mascota.id!); $event.stopPropagation()">eliminar</a>
-      </td>
     </tr>
     </tbody>
   </table>
