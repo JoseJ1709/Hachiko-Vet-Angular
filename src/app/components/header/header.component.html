@@ -9,14 +9,20 @@
       <li *ngIf="userRole === 'landing'"><a href="/login-client">Iniciar</a></li>
       <li *ngIf="userRole === 'veterinario-d'"><a href="/mascotas">Lista de Mascotas</a></li>
       <li *ngIf="userRole === 'veterinario-d'"><a href="/clientes">Lista de Clientes</a></li>
+      <li *ngIf="userRole === 'admin'"><a href="/veterinarios">Lista de Veterinarios</a></li>
+      <li *ngIf="userRole === 'admin'"><a href="/registro-v">Registrar</a></li>
       <li *ngIf="userRole === 'veterinario-d'"><a href="/registro-m">Registrar</a></li>
       <li *ngIf="userRole === 'veterinario-c'"><a href="/mascotas">Lista de Mascotas</a></li>
       <li *ngIf="userRole === 'veterinario-c'"><a href="/clientes">Lista de Clientes</a></li>
       <li *ngIf="userRole === 'veterinario-c'"><a href="/registro-c">Registrar</a></li>
       <li *ngIf="userRole === 'usuario'"><a href="/usuario/salir">Salir</a></li>
-      <li *ngIf="userRole === 'admin'"><a href="/admin/veterinarios">Lista de Veterinarios</a></li>
-      <li *ngIf="userRole === 'login-c'"><a href="/login-vet">Login</a></li>
-      <li *ngIf="userRole === 'login-v'"><a href="/login-client">Login</a></li>
+
+      <li *ngIf="userRole === 'login-c'"><a href="/login-vet">Veterinario</a></li>
+      <li *ngIf="userRole === 'login-c'"><a href="/login-admin">Administrador</a></li>
+      <li *ngIf="userRole === 'login-v'"><a href="/login-client">Cliente</a></li>
+      <li *ngIf="userRole === 'login-v'"><a href="/login-admin">Administrador</a></li>
+      <li *ngIf="userRole === 'login-a'"><a href="/login-client">Cliente</a></li>
+      <li *ngIf="userRole === 'login-a'"><a href="/login-vet">Veterinario</a></li>
     </ul>
     <button id="book-now">
       <img id="logo-message" src="./assets/landing/message-circle.png" alt="message-circle"> <!-- Icono -->

@@ -23,6 +23,11 @@ export class TableClientComponent implements OnInit{
   }
 
   editCliente(cliente: ClienteCl): void {
+    const updatedCliente: ClienteCl = cliente;
+    const index = this.clientes.findIndex(c => c.id === updatedCliente.id);
+    if (index !== -1) {
+      this.clientes[index] = updatedCliente;
+    }
     this.router.navigate(['/registro-c'], { queryParams: { id: cliente.id } });
   }
 

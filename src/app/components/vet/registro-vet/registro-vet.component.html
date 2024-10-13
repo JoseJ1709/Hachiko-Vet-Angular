@@ -1,0 +1,36 @@
+<div id="clouds">
+  <img id="centro1" src="../../../../assets/register/centro1.png">
+  <img id="centro2" src="../../../../assets/register/centro2.png">
+</div>
+<div id="forms">
+  <h1 class="registrar" *ngIf="userRole === 'registrar'">Registrar</h1>
+  <h1 class="registrar" *ngIf="userRole === 'editar'">Editar</h1>
+  <form (ngSubmit)="addVeterinarioForm()">
+    <h2>Información Veterinario</h2>
+
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="formVeterinario.nombre" name="nombre" required>
+    </div>
+
+    <div>
+      <label for="raza">Especialidad:</label>
+      <input type="text" id="raza" [(ngModel)]="formVeterinario.especialidad" name="raza" required>
+    </div>
+
+    <div>
+      <label for="foto">Imagen:</label>
+      <input type="text" id="foto" [(ngModel)]="formVeterinario.foto" name="Imagen" required>
+    </div>
+
+
+    <div>
+      <label for="peso">Atenciones</label>
+      <input type="number" id="peso" [(ngModel)]="formVeterinario.num_atenciones" name="peso" required>
+    </div>
+
+    <div class="button-registrar">
+      <button id="button-registrar-mascota" type="submit">Registrar</button>
+    </div>
+  </form>
+</div>

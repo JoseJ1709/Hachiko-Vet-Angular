@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MascotaCl } from '../../../interfaces/mascota-cl';
 import { MascotaService } from '../../../services/mascota.service';
+import {ClienteCl} from "../../../interfaces/cliente-cl";
 
 
 @Component({
@@ -25,6 +26,11 @@ export class TableDogsComponent implements OnInit {
   }
 
   editMascota(mascota: MascotaCl): void {
+    const updatedMascota: MascotaCl = mascota;
+    const index = this.mascotas.findIndex(c => c.id === updatedMascota.id);
+    if (index !== -1) {
+      this.mascotas[index] = updatedMascota;
+    }
     this.router.navigate(['/registro-m'], { queryParams: { id: mascota.id } });
   }
 

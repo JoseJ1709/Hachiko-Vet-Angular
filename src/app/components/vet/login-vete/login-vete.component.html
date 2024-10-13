@@ -1,0 +1,18 @@
+<main>
+  <div id="logins">
+    <div class="forms">
+      <h1 class="registrar">Administrador</h1>
+      <form (ngSubmit)="checkLogin()">
+        <div>
+          <input [(ngModel)]="cedula" type="text" id="cedula-v" name="cedula" placeholder="Cédula">
+        </div>
+        <div>
+          <input [(ngModel)]="contrase" type="password" id="password" name="password" placeholder="Contraseña">
+        </div>
+        <div class="button-registrar">
+          <button type="submit" class="button-registrar2" >Ingresar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

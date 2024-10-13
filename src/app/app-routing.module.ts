@@ -9,6 +9,9 @@ import {LoginClientComponent} from "./pages/login/login-client/login-client.comp
 import {LoginVetComponent} from "./pages/login/login-vet/login-vet.component";
 import {MascotasComponent} from "./pages/clients/mascotas/mascotas.component";
 import {DetailDogComponent} from "./pages/dogs/detail-dog/detail-dog.component";
+import {RegistroVComponent} from "./pages/administrador/registro-v/registro-v.component";
+import {ListVComponent} from "./pages/administrador/list-v/list-v.component";
+import {LoginAdminComponent} from "./pages/login/login-admin/login-admin.component";
 
 
 const routes: Routes = [
@@ -20,8 +23,11 @@ const routes: Routes = [
   {path: 'registro-c', component : RegistroCComponent},
   {path: 'login-client', component : LoginClientComponent},
   {path: 'login-vet', component : LoginVetComponent},
+  {path: 'login-admin', component : LoginAdminComponent},
   {path: 'mascotas-cliente', component : MascotasComponent},
-  {path: 'detalles-mascota', component : DetailDogComponent}
+  {path: 'detalles-mascota', component : DetailDogComponent},
+  {path: 'veterinarios', component : ListVComponent},
+  {path: 'registro-v', component : RegistroVComponent},
 ];
 
 @NgModule({

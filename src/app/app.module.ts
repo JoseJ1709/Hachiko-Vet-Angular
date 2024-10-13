@@ -24,6 +24,12 @@ import { MascotasClientComponent } from './components/client/mascotas-client/mas
 import {MascotasComponent} from "./pages/clients/mascotas/mascotas.component";
 import { DetailsComponent } from './components/dogs/details/details.component';
 import { DetailDogComponent } from './pages/dogs/detail-dog/detail-dog.component';
+import { RegistroVComponent } from './pages/administrador/registro-v/registro-v.component';
+import { ListVComponent } from './pages/administrador/list-v/list-v.component';
+import { LoginAdminComponent } from './pages/login/login-admin/login-admin.component';
+import { LoginVeteComponent } from './components/vet/login-vete/login-vete.component';
+import { TableVetComponent } from './components/vet/table-vet/table-vet.component';
+import { RegistroVetComponent } from './components/vet/registro-vet/registro-vet.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +53,12 @@ import { DetailDogComponent } from './pages/dogs/detail-dog/detail-dog.component
     MascotasComponent,
     DetailsComponent,
     DetailDogComponent,
+    RegistroVComponent,
+    ListVComponent,
+    LoginAdminComponent,
+    LoginVeteComponent,
+    TableVetComponent,
+    RegistroVetComponent,
   ],
   imports: [
     BrowserModule,

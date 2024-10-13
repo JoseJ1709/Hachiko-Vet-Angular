@@ -1,0 +1,28 @@
+<div class="container">
+  <div id="register-container">
+    <h1>Veterinarios registrados</h1>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Especialidad</th>
+      <th>Imagen</th>
+      <th>Atenciones</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let vet of veterinarios" >
+      <td>{{ vet.nombre }}</td>
+      <td>{{ vet.especialidad }}</td>
+      <td><img id="imagen-dog" [src]="vet.foto"></td>
+      <td>{{ vet.num_atenciones }}</td>
+      <td>
+        <a id="editar" (click)="editVeterinario(vet); $event.stopPropagation()">editar</a>
+        <a id="eliminar" (click)="deleteVeterinario(vet.id!); $event.stopPropagation()">eliminar</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
