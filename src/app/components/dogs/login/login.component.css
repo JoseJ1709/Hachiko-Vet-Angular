@@ -1,3 +1,59 @@
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+
+#clouds-container {
+  position: absolute;
+
+  width: 100vw;
+  height: 80%;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#cloud1  { /* Cloud 1 in the top right side of the site */
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  margin-top: 40px;
+  animation: moveclouds 20s linear infinite;
+  justify-content: flex-end;
+  align-self: flex-start;
+
+}
+
+#cloud1 img {
+  width: 350px;
+  height: 300px;
+}
+
+#cloud2  { /* Cloud 2 in the bottom left side of the site */
+  position: absolute;
+  display: flex;
+  width: 300px;
+  height: 150px;
+  animation: moveclouds 20s linear infinite;
+  align-self: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+#health img {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  left: 0;
+
+}
+
 #clouds {
   position: absolute;
   top: 150px;
@@ -29,7 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  z-index: 2;
   gap: 100px;
 }
 .forms {

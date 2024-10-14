@@ -1,7 +1,19 @@
 <main>
+  <div id="clouds-container">
+    <div id="cloud1" class="clouds">
+      <img src="./assets/landing/cloud1.png" alt="cloud">
+    </div>
+    <div id="cloud2" class="clouds">
+      <img src="./assets/landing/cloud4.png" alt="cloud">
+    </div>
+
+    <div id="health">
+      <img src="./assets/landing/health3.png" alt="health">
+    </div>
+  </div>
   <div id="logins">
     <div class="forms">
-      <h1 class="registrar">Usuario</h1>
+      <h1 class="registrar">Ingresar</h1>
       <form  (ngSubmit)="checkLogin()">
         <div>
           <input [(ngModel)]="cedula" type="text" id="cedula" name="cedula" placeholder="Cédula" required minlength="10" >
@@ -10,6 +22,10 @@
           <button class="button-registrar2" type="submit">Ingresar</button>
         </div>
       </form>
+
+      <p class="sin-cuenta">No tienes cuenta? <a href="/registro-c">Registrate</a></p>
+
     </div>
   </div>
+
 </main>

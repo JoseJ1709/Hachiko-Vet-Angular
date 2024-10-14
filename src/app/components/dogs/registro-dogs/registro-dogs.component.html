@@ -8,42 +8,42 @@
   <form (ngSubmit)="addMascotaForm()">
     <h2>Información Mascota</h2>
 
-    <div>
+    <div class="form-input">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" [(ngModel)]="formMascota.nombre" name="nombre" required>
     </div>
 
-    <div>
+    <div class="form-input">
       <label for="raza">Raza:</label>
       <input type="text" id="raza" [(ngModel)]="formMascota.raza" name="raza" required>
     </div>
 
-    <div>
+    <div class="form-input">
       <label for="peso">Peso (kg):</label>
       <input type="number" id="peso" [(ngModel)]="formMascota.peso" name="peso" required>
     </div>
 
-    <div>
+    <div class="form-input">
       <label for="edad">Edad (años):</label>
       <input type="number" id="edad" [(ngModel)]="formMascota.edad" name="edad" required>
     </div>
 
-    <div>
+    <div class="form-input">
       <label for="foto">Imagen:</label>
       <input type="text" id="foto" [(ngModel)]="formMascota.imagen" name="Imagen" required>
     </div>
 
-    <div>
+    <div class="form-input">
       <label for="enfermedad">Enfermedad:</label>
       <input type="text" id="enfermedad" [(ngModel)]="formMascota.enfermedad" name="enfermedad" required>
     </div>
 
-    <div>
+    <div class="form-input">
       <label for="estado">Estado:</label>
       <input type="checkbox" id="estado" [(ngModel)]="formMascota.estado" name="estado">
     </div>
 
-    <div>
+    <div  class="form-input">
       <label for="cliente">Cliente:</label>
       <select id="cliente" [(ngModel)]="formMascota.cliente" name="cliente" required>
         <option *ngFor="let cliente of clientes" [ngValue]="cliente">{{cliente.nombre}}</option>

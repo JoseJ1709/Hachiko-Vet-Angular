@@ -1,3 +1,9 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 #container{
   padding-top: 50px;
@@ -5,10 +11,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   background-color: transparent;
-  height: auto;
+  min-height: 500px;
   gap: 30px;
+  background-color:  #ffffffb0;
+  box-sizing: content-box;border-radius: 10px;
 }
 #img-container img{
   margin-top: 70px;
@@ -41,7 +49,7 @@
   justify-content: center;
   align-items: center;
   height: 55px;
-  background: #ffffffb0;
+  background: rgb(74,144,226,0.7);
   padding: 1px 30px;
   border-radius: 40px;
   margin-bottom: 10px;
@@ -49,7 +57,7 @@
   font-size: 30px;
 }
 .info, .treatments {
-  background: #ffffffb0;
+  background: rgb(74,144,226,0.7);
   border-radius: 20px;
   margin-bottom: 10px;
   padding: 30px;

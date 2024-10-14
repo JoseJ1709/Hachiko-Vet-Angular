@@ -4,40 +4,45 @@
   left: 0;
   width: 100%;
   height: 300px;
-  z-index: -1;
-  pointer-events: none;
+  z-index: 0;
 }
 #centro1{
   position: absolute;
   right: 0;
   margin-top: 140px;
   width: 500px;
+  z-index: 1;
 }
 #centro2{
   position: absolute;
   left: 0;
   margin-top: 600px;
   margin-left: 60px;
+  z-index: 0;
 }
 
 #forms {
-  margin-top: 100px;
-  margin-left: 500px;
+  position: relative;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.486);
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 10px 40px 10px;
   border-radius: 15px;
   width: 700px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  z-index: 1;
 }
+
 
 .registrar {
   font-size: 50px;
   color: #0863be;
   text-align: center;
   margin-top: 50px;
+
 }
 
 #forms h2 {
@@ -45,24 +50,28 @@
   font-size: 35px;
   color: #2C3E50;
   margin-bottom: 20px;
+
 }
 
 #forms div {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+
 }
 
 #forms form div {
   display: flex;
   flex-direction: row;
   gap: 100px;
+
 }
 
 #forms label {
   font-size: 27px;
   color: #2C3E50;
   margin-bottom: 5px;
+
 }
 
 #forms input {
@@ -74,11 +83,18 @@
   color: #2C3E50;
   margin-bottom: 10px;
   width: 400px;
+
+}
+
+.input-form{
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-registrar {
   padding-top: 30px;
   margin-left: 270px;
+  z-index: 1;
 }
 
 #button-registrar, #button-registrar-mascota {
@@ -95,4 +111,5 @@
   border-radius: 22px;
   text-decoration: none;
   margin-right: 10px;
+  z-index: 1;
 }
