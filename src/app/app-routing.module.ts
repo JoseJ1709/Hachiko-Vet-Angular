@@ -12,6 +12,7 @@ import {DetailDogComponent} from "./pages/dogs/detail-dog/detail-dog.component";
 import {RegistroVComponent} from "./pages/administrador/registro-v/registro-v.component";
 import {ListVComponent} from "./pages/administrador/list-v/list-v.component";
 import {LoginAdminComponent} from "./pages/login/login-admin/login-admin.component";
+import {TratamientoComponent} from "./pages/dogs/tratamiento/tratamiento.component";
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'detalles-mascota', component : DetailDogComponent},
   {path: 'veterinarios', component : ListVComponent},
   {path: 'registro-v', component : RegistroVComponent},
+  {path: 'tratamiento', component : TratamientoComponent}
 ];
 
 @NgModule({

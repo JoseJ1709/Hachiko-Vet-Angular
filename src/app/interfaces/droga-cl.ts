@@ -3,14 +3,15 @@ export class DrogaCl {
   public nombre: string;
   public precioCompra: number;
   public precioVenta: number;
-  public unidadesDisponibles: number;
-  public unidadesVendidas: number;
+  public uni_disponibles: number;
+  public uni_vendidas: number;
 
-  constructor(nombre: string, precioCompra: number, precioVenta: number, unidadesDisponibles: number, unidadesVendidas: number) {
+  constructor(nombre: string, precioCompra: number, precioVenta: number, uni_disponibles: number, uni_vendidas: number) {
     this.nombre = nombre;
     this.precioCompra = precioCompra;
     this.precioVenta = precioVenta;
-    this.unidadesDisponibles = unidadesDisponibles;
-    this.unidadesVendidas = unidadesVendidas;
+    this.uni_disponibles = uni_disponibles;
+    this.uni_vendidas = uni_vendidas;
   }
+
 }

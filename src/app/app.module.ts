@@ -30,6 +30,8 @@ import { LoginAdminComponent } from './pages/login/login-admin/login-admin.compo
 import { LoginVeteComponent } from './components/vet/login-vete/login-vete.component';
 import { TableVetComponent } from './components/vet/table-vet/table-vet.component';
 import { RegistroVetComponent } from './components/vet/registro-vet/registro-vet.component';
+import { TratamientoComponent } from './pages/dogs/tratamiento/tratamiento.component';
+import { TratamientoDComponent } from './components/dogs/tratamiento-d/tratamiento-d.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { RegistroVetComponent } from './components/vet/registro-vet/registro-vet
     LoginVeteComponent,
     TableVetComponent,
     RegistroVetComponent,
+    TratamientoComponent,
+    TratamientoDComponent,
   ],
   imports: [
     BrowserModule,

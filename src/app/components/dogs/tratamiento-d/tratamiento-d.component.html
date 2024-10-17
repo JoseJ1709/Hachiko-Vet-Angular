@@ -1,0 +1,38 @@
+
+<div id="forms">
+  <h1 class="registrar">Crear Tratamiento</h1>
+  <form (ngSubmit)="addTratamiento()" >
+    <h2>Información del Tratamiento</h2>
+
+    <div class="form-input">
+      <label for="mascota">Mascota:</label>
+      <select id="mascota" name="mascota" [(ngModel)]="formTratamiento.mascota.id" required>
+        <option *ngFor="let mascota of formMascota" [value]="mascota.id">{{ mascota.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="form-input">
+      <label for="veterinario">Veterinario:</label>
+      <select id="veterinario" name="veterinario" [(ngModel)]="formTratamiento.veterinario.id" required>
+        <option *ngFor="let veterinario of formVet" [value]="veterinario.id">{{ veterinario.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="form-input">
+      <label for="medicamento">Medicamento:</label>
+      <select id="medicamento" name="medicamento" [(ngModel)]="formTratamiento.droga.id" required>
+        <option *ngFor="let droga of formDroga" [value]="droga.id">{{ droga.nombre }} - Unidades disponibles: {{ droga.uni_disponibles }}</option>
+      </select>
+    </div>
+
+
+    <div class="form-input">
+      <label for="fecha">Fecha:</label>
+      <input id="fecha" name="fecha" type="date" [(ngModel)]="formTratamiento.fecha" [value]="today" required>
+    </div>
+
+    <div class="button-registrar">
+      <button id="button-registrar" type="submit">Crear Tratamiento</button>
+    </div>
+  </form>
+</div>
