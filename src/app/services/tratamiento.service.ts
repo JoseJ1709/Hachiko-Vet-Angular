@@ -1,5 +1,7 @@
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
+import {Observable} from "rxjs";
+import {TratamientoCl} from "../interfaces/tratamiento-cl";
 @Injectable({
   providedIn: 'root'
 })
@@ -17,5 +19,8 @@ export class TratamientoService {
     } else {
       console.error('Cliente ID is undefined');
     }
+  }
+  getTratamientoMascota(mascotaId :number) : Observable<TratamientoCl[]>{
+      return this.http.get<TratamientoCl[]>(`http://localhost:8090/tratamiento/mascota/${mascotaId}`);
   }
 }
