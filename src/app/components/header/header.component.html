@@ -15,8 +15,10 @@
       <li *ngIf="userRole === 'veterinario-c'"><a href="/mascotas">Lista de Mascotas</a></li>
       <li *ngIf="userRole === 'veterinario-c'"><a href="/clientes">Lista de Clientes</a></li>
       <li *ngIf="userRole === 'veterinario-c'"><a href="/registro-c">Registrar</a></li>
-      <li *ngIf="userRole === 'veterinario-c'"><a href="/tratamiento">Tratamiento</a></li>
-      <li *ngIf="userRole === 'veterinario-d'"><a href="/tratamiento">Tratamiento</a></li>
+      <li *ngIf="userRole === 'veterinario-c'"><a href="/tratamiento">Tratar</a></li>
+      <li *ngIf="userRole === 'veterinario-d'"><a href="/tratamiento">Tratar</a></li>
+      <li *ngIf="userRole === 'veterinario-c'"><a href="/tratamientos">Tratamientos</a></li>
+      <li *ngIf="userRole === 'veterinario-d'"><a href="/tratamientos">Tratamientos</a></li>
       <li *ngIf="userRole === 'usuario'"><a href="/usuario/salir">Salir</a></li>
 
       <li *ngIf="userRole === 'login-c'"><a href="/login-vet">Veterinario</a></li>
@@ -28,9 +30,6 @@
 
       <li *ngIf="userRole === 'salir-c'"><a href="/">Salir</a></li>
     </ul>
-    <button id="book-now">
-      <img id="logo-message" src="./assets/landing/message-circle.png" alt="message-circle"> <!-- Icono -->
-      Escribenos
-    </button>
+
   </nav>
 </header>

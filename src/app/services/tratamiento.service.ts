@@ -23,4 +23,9 @@ export class TratamientoService {
   getTratamientoMascota(mascotaId :number) : Observable<TratamientoCl[]>{
       return this.http.get<TratamientoCl[]>(`http://localhost:8090/tratamiento/mascota/${mascotaId}`);
   }
+
+  getTratamientosVeterinario(veterinarioId :number) : Observable<TratamientoCl[]>{
+      console.log(veterinarioId);
+      return this.http.get<TratamientoCl[]>(`http://localhost:8090/tratamiento/veterinario/${veterinarioId}`);
+  }
 }

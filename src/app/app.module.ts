@@ -32,6 +32,8 @@ import { TableVetComponent } from './components/vet/table-vet/table-vet.componen
 import { RegistroVetComponent } from './components/vet/registro-vet/registro-vet.component';
 import { TratamientoComponent } from './pages/dogs/tratamiento/tratamiento.component';
 import { TratamientoDComponent } from './components/dogs/tratamiento-d/tratamiento-d.component';
+import { TratamientosComponent } from './pages/dogs/tratamientos/tratamientos.component';
+import { TratamientosVComponent } from './components/dogs/tratamientos-v/tratamientos-v.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { TratamientoDComponent } from './components/dogs/tratamiento-d/tratamien
     RegistroVetComponent,
     TratamientoComponent,
     TratamientoDComponent,
+    TratamientosComponent,
+    TratamientosVComponent,
   ],
   imports: [
     BrowserModule,

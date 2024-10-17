@@ -18,6 +18,9 @@ export class VeterinarioService{
     console.log(id);
     return this.http.get<VeterinarioCl>(`http://localhost:8090/veterinario/find/`+id);
   }
+  getVeterinarioByCedula(cedula: string ): Observable<VeterinarioCl> {
+    return this.http.get<VeterinarioCl>(`http://localhost:8090/veterinario/login/${cedula}`);
+  }
 
   deleteVeterinario(id: number){
     this.http.delete(`http://localhost:8090/veterinario/eliminar/`+id).subscribe();
