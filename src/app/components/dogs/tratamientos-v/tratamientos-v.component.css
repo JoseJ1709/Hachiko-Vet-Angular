@@ -1,0 +1,95 @@
+.veterinario-busqueda {
+  background-color: #ffffffb0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 200px auto;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.veterinario-busqueda h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4A90E2;
+}
+
+.form-busqueda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-busqueda label {
+  font-size: 18px;
+  color: #333;
+}
+
+.form-busqueda input {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #4A90E2;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.form-busqueda button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-busqueda button:hover {
+  background-color: #357ABD;
+}
+
+#tratamientos-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffffb0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#tratamientos-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #4A90E2;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.treatment-item {
+  background-color: #f0f8ff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.treatment-item p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.treatment-item strong {
+  font-weight: bold;
+}
+
+.treatment-item span {
+  color: #4A90E2;
+}

@@ -1,0 +1,19 @@
+<div class="veterinario-busqueda">
+  <h2>Buscar tratamientos por veterinario</h2>
+  <form (ngSubmit)="buscarVeterinario()" class="form-busqueda">
+    <label for="cedula">Cédula del Veterinario:</label>
+    <input type="text" id="cedula" [(ngModel)]="cedulaVeterinario" name="cedula" required />
+    <button type="submit">Buscar</button>
+  </form>
+</div>
+
+<div *ngIf="tratamientosVeterinario.length > 0" id="tratamientos-container">
+  <h2>Tratamientos del Veterinario</h2>
+  <ul>
+    <li *ngFor="let tratamiento of tratamientosVeterinario" class="treatment-item">
+      <p><strong>Mascota:</strong> <span>{{ tratamiento.mascota.nombre }}</span></p>
+      <p><strong>Fecha:</strong> <span>{{ tratamiento.fecha | date:'dd/MM/yyyy' }}</span></p>
+      <p><strong>Medicamento:</strong> <span>{{ tratamiento.droga.nombre }}</span></p>
+    </li>
+  </ul>
+</div>
