@@ -28,4 +28,7 @@ export class TratamientoService {
       console.log(veterinarioId);
       return this.http.get<TratamientoCl[]>(`http://localhost:8090/tratamiento/veterinario/${veterinarioId}`);
   }
+  getTratamientos() : Observable<TratamientoCl[]>{
+      return this.http.get<TratamientoCl[]>('http://localhost:8090/tratamiento/all');
+  }
 }

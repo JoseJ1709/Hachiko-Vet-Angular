@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ClienteService} from "../../../services/cliente.service";
 import {MascotaService} from "../../../services/mascota.service";
-import {DrograService} from "../../../services/drogra.service";
+import {DrogaService} from "../../../services/droga.service";
 import {VeterinarioService} from "../../../services/veterinario.service";
 import {VeterinarioCl} from "../../../interfaces/veterinario-cl";
 import {MascotaCl} from "../../../interfaces/mascota-cl";
@@ -27,7 +27,7 @@ export class TratamientoDComponent implements OnInit{
     private route: ActivatedRoute,
     private veterinarioService : VeterinarioService,
     private mascotaService : MascotaService,
-    private drograService : DrograService, private tratamientoService : TratamientoService ) { }
+    private drograService : DrogaService, private tratamientoService : TratamientoService ) { }
   today: string = new Date().toISOString().split('T')[0];
 
   ngOnInit(): void {

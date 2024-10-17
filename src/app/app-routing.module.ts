@@ -14,6 +14,7 @@ import {ListVComponent} from "./pages/administrador/list-v/list-v.component";
 import {LoginAdminComponent} from "./pages/login/login-admin/login-admin.component";
 import {TratamientoComponent} from "./pages/dogs/tratamiento/tratamiento.component";
 import {TratamientosComponent} from "./pages/dogs/tratamientos/tratamientos.component";
+import {DatosComponent} from "./pages/administrador/datos/datos.component";
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path: 'veterinarios', component : ListVComponent},
   {path: 'registro-v', component : RegistroVComponent},
   {path: 'tratamiento', component : TratamientoComponent},
-  {path: 'tratamientos', component : TratamientosComponent}
+  {path: 'tratamientos', component : TratamientosComponent},
+  {path: 'datos', component : DatosComponent}
 ];
 
 @NgModule({

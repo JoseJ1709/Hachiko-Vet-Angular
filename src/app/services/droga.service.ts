@@ -7,7 +7,7 @@ import {DrogaCl} from "../interfaces/droga-cl";
   providedIn: 'root'
 })
 
-export class DrograService{
+export class DrogaService {
     constructor( private http: HttpClient) {
     }
 

@@ -34,6 +34,8 @@ import { TratamientoComponent } from './pages/dogs/tratamiento/tratamiento.compo
 import { TratamientoDComponent } from './components/dogs/tratamiento-d/tratamiento-d.component';
 import { TratamientosComponent } from './pages/dogs/tratamientos/tratamientos.component';
 import { TratamientosVComponent } from './components/dogs/tratamientos-v/tratamientos-v.component';
+import { DatosComponent } from './pages/administrador/datos/datos.component';
+import { DatosAComponent } from './components/admin/datos-a/datos-a.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,8 @@ import { TratamientosVComponent } from './components/dogs/tratamientos-v/tratami
     TratamientoDComponent,
     TratamientosComponent,
     TratamientosVComponent,
+    DatosComponent,
+    DatosAComponent,
   ],
   imports: [
     BrowserModule,
