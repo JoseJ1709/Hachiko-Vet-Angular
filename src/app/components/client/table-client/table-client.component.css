@@ -137,6 +137,7 @@ tbody tr:nth-child(even) {
 #register-container{
   display: flex;
   align-items: center;
+  background-color: transparent;
 }
 #button-registrar{
   margin-top: 20px;

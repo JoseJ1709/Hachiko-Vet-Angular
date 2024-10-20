@@ -29,12 +29,12 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+
 }
 table {
   width: 1000px;
   border-collapse: collapse;
   border-spacing: 0 10px;
-
 }
 
 th{

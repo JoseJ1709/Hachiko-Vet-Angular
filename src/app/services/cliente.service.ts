@@ -24,7 +24,7 @@ export class ClienteService{
     deleteCliente(id: number){
       this.http.delete(`http://localhost:8090/cliente/eliminar/`+id).subscribe();
     }
-    addCliente(cliente: ClienteCl){
+    addCliente(cliente: ClienteCl) {
       this.http.post('http://localhost:8090/cliente/agregar ', cliente).subscribe();
     }
 

@@ -20,6 +20,7 @@ export class TableClientComponent implements OnInit{
   deleteCliente(id: number): void {
     this.clientes = this.clientes.filter(cliente => cliente.id !== id);
     this.clienteService.deleteCliente(id);
+
   }
 
   editCliente(cliente: ClienteCl): void {

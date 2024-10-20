@@ -93,18 +93,23 @@ export class DatosAComponent implements OnInit {
       }
     });
 
-    // Convertir el Map a un array de objetos {nombre: 'nombreDroga', cantidad: x}
     this.tratamientosPorMedicamento = Array.from(medicamentoCantidadMap, ([nombre, cantidad]) => ({ nombre, cantidad }));
   }
 
   calcularVentasYGanancias() {
     this.ventasTotales = this.formTratamientos.reduce((total, tratamiento) => {
-      return total + tratamiento.droga.precioVenta;
+      if (tratamiento.droga && typeof tratamiento.droga.precioVenta === 'number' && typeof tratamiento.droga.uni_vendidas === 'number') {
+        return total + (tratamiento.droga.precioVenta * tratamiento.droga.uni_vendidas);
+      }
+      return total;
     }, 0);
 
     this.gananciasTotales = this.formTratamientos.reduce((total, tratamiento) => {
-      const gananciaPorUnidad = tratamiento.droga.precioVenta - tratamiento.droga.precioCompra;
-      return total + gananciaPorUnidad;
+      if (tratamiento.droga && typeof tratamiento.droga.precioVenta === 'number' && typeof tratamiento.droga.precioCompra === 'number' && typeof tratamiento.droga.uni_vendidas === 'number') {
+        const gananciaPorUnidad = (tratamiento.droga.precioVenta - tratamiento.droga.precioCompra) * tratamiento.droga.uni_vendidas;
+        return total + gananciaPorUnidad;
+      }
+      return total;
     }, 0);
   }
   calcularTopTratamientosVendidos() {
@@ -113,13 +118,12 @@ export class DatosAComponent implements OnInit {
     this.formTratamientos.forEach(tratamiento => {
       const nombreTratamiento = tratamiento.droga.nombre;
       if (tratamientosUnidadesMap.has(nombreTratamiento)) {
-        tratamientosUnidadesMap.set(nombreTratamiento, tratamientosUnidadesMap.get(nombreTratamiento) + tratamiento.droga.uni_vendidas);
+        tratamientosUnidadesMap.set(nombreTratamiento, tratamientosUnidadesMap.get(nombreTratamiento) );
       } else {
         tratamientosUnidadesMap.set(nombreTratamiento, tratamiento.droga.uni_vendidas);
       }
     });
 
-    // Convertir a array y ordenar por unidades vendidas
     const tratamientosArray = Array.from(tratamientosUnidadesMap, ([nombre, unidadesVendidas]) => ({ nombre, unidadesVendidas }));
     this.topTratamientosVendidos = tratamientosArray.sort((a, b) => b.unidadesVendidas - a.unidadesVendidas).slice(0, 3);
   }
